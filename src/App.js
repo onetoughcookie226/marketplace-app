@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
+import PropTypes from 'prop-types';
 import './App.css';
 
 class App extends Component {
+    
+  constructor(props){
+    super(props);
+    this.state = {
+      jobs: [],
+      users: []
+    };
+  }
+
   render() {
     return (
       <div className="App">
@@ -16,27 +25,27 @@ class App extends Component {
           </div>
         </nav>
 
-
-        <div class="container-fluid">
-          <div class="row">
-                <div class="col-xs-1">   
+        <div className="container-fluid">
+          <div className="row">
+                <div className="col-xs-1">   
                 </div>
-                <div class="col-xs-10">
-                    <div class="search-results">
+                <div className="col-xs-10">
+                    <div className="search-results">
                         <div>
-                            <h3>Resturant Manager</h3>
-                            <small class="text-muted">Gummies muffin International</small>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. dolore eu fugiat nulla pariatu.
-                            </p> 
-                            <button type="submit" className="btn btn-default btn-retract">Retract</button>
+                          <div className="title"><h3>{this.props.title}</h3></div>
+                          
+                          <small className="text-muted">Gummies muffin International</small>
+                          <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. dolore eu fugiat nulla pariatu.
+                          </p> 
+                          <button type="submit" className="btn btn-default btn-retract">Retract</button>
                         </div>
                     </div>
 
-                    <div class="search-results">
+                    <div className="search-results">
                         <div>
                             <h3>Head Chet</h3>
-                            <small class="text-muted">Lemon drops Amsterdam</small>
+                            <small className="text-muted">Lemon drops Amsterdam</small>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. dolore eu fugiat nulla pariatu.
                             </p> 
@@ -44,7 +53,7 @@ class App extends Component {
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-1">
+                <div className="col-xs-1">
                 </div>
           </div>
       </div>
@@ -52,6 +61,13 @@ class App extends Component {
       </div>
     );
   }
+
+
 }
+// App.propTypes= {
+//   title:propTypes.string,
+//   id:propTypes.number,
+//   company: propTypes.string,
+// }
 
 export default App;
