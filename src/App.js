@@ -24,6 +24,24 @@ class App extends Component {
       ]
     };
   }
+  
+
+  // componentDidMount() {
+  //   axios.get('/user', {
+  //     params: {
+  //       ID: 12345
+  //     }
+  //   })
+  //   .then(function (response) {
+  //     console.log(response);
+  //   })
+  //   .catch(function (error) {
+  //     console.log(error);
+  //   })
+  //   .then(function () {
+  //     // always executed
+  //   })
+  // }
 
   render() {
     return (
@@ -31,9 +49,9 @@ class App extends Component {
         <nav className="navbar navbar-default">   
           <div className="container-fluid">
               <ul className="navbar-header">
-                  <li><span className="glyphicon glyphicon-briefcase"></span></li>            
+                  <li><a className="glyphicon glyphicon-briefcase"  href="#"></a></li>            
                   <li><span className="navbar-brand" href="#">Job Marketplace</span></li>
-                  <li><span className="glyphicon glyphicon-user"></span></li> 
+                  <li><a className="glyphicon glyphicon-user" href="#"></a></li> 
               </ul>
           </div>
         </nav>
@@ -58,9 +76,7 @@ class App extends Component {
                             <div className="title"><h3>{this.props.title}</h3></div>
 
                             <small className="text-muted"></small>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. dolore eu fugiat nulla pariatu.
-                            </p> 
+                            <p className="">{}</p> 
                             <button type="submit" className="btn btn-success btn-save">Apply</button>
                         </div>
                     </div>
@@ -69,12 +85,9 @@ class App extends Component {
                 </div>
           </div>
       </div>
-
       </div>
     );
   }
-
-
 }
 
 // class Navbar extends React.Component{
